@@ -2,17 +2,19 @@ var bodyX = [3, 3, 3, 3];
 var bodyY = [2, 3, 4, 5];
 var snakeLength = 4;
 
+
+
 var GRIDSIZE = 15;
 
 var foodX = 10;
 var foodY = 10;
+
 
 var direction = "right";
 
 function setup() {
   createCanvas(405, 405);
   frameRate(5);
-  
 }
 
 function draw() {
@@ -40,6 +42,8 @@ function draw() {
   // add new head
   bodyX.unshift(newX);
   bodyY.unshift(newY);
+  
+  
 
   // make sure snake isn't too long
   bodyX = bodyX.slice(0, snakeLength);
@@ -51,9 +55,16 @@ function draw() {
     frameRate(frameRate() + 1);
     placeFood();
   }
+  
+  // score
+  var score = 10 * (snakeLength - 4);
+  textSize(20);
+  text(score, width - 40, 30);
+  
+  
 
   // draw snake
-  noStroke();
+  noStroke(); 
   fill(255);
   for (var i = 0; i < bodyX.length; i = i + 1) {
     rect(bodyX[i] * GRIDSIZE, bodyY[i] * GRIDSIZE, GRIDSIZE, GRIDSIZE);
