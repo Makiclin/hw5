@@ -77,7 +77,7 @@ function draw() {
   
   // check for collisions with edges
   for (var i = 1; i < bodyX.length; i = i + 1) {
-    if (bodyX[i] == 0 || bodyX[i] > width/GRIDSIZE -1|| bodyY[i] == 0 || bodyY[i] > height/GRIDSIZE-1) {
+    if (bodyX[i] == -1 || bodyX[i] > width/GRIDSIZE -1|| bodyY[i] == -1 || bodyY[i] > height/GRIDSIZE-1) {
       background(0, 90);
       fill(255);
       textSize(96);
