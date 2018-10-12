@@ -1,0 +1,24 @@
+function setup() {
+  createCanvas(400, 400);
+  background(220);
+}
+
+
+
+function draw() {
+  background(220);
+  
+  for (var i = 1; i <= 800; i = i + 6) {
+  
+    
+  var startX = i;
+  var startY = 0;
+  var endX = 0;
+  var endY = i;
+  line(startX, startY, endX, endY);
+	}
+  
+  
+  
+  
+}
